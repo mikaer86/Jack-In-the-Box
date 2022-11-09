@@ -31,6 +31,24 @@ body {
     
 }
 
+.cellAmount {
+
+    width: 350px;
+    height: 45px;
+    padding: 1rem;
+    position: absolute;
+    top: 40%;
+    left: 36%;
+    border-radius: 3px solid ;
+}
+
+.cellAmount::placeholder {
+
+  font-size: 2.8rem;
+  font-family:  'Open Sans';
+  font-weight: bolder;
+}
+
 .gameBoard {
 
 
