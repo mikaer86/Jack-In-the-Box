@@ -7,7 +7,6 @@ export async function fetchAllPokes() {
     const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
     const data = await res.json();
     initializeBoard(data);
-    return pokeMons;
 }
 function initializeBoard(allPokesData) {
     //👇in .results we have a array of all pokemons --> each pokemon is array of 2 keys (name & url)
@@ -18,18 +17,10 @@ function initializeBoard(allPokesData) {
         fetchPokeData(pokemonsArr[randomIndex]);
     }
 }
-
-
+//👇pokeMons is a araay of 12 randomes pokemons (what we need)
 async function fetchPokeData(pokemon) {
     const url = pokemon.url;
     const res = await fetch(url);
     const data = await res.json();
     pokeMons.push(data);
 }
-
-
-// let pokeImage = document.createElement('img');
-// 👇 in order to get image of a pokemon --> we need pokemon id (which is integers like 1,2,3).
-// pokeImage.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeData.id}.png`;
-// div.append(pokeImage);
-// pokeImage.after(pokeData.name);
