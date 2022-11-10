@@ -26,10 +26,3 @@ async function fetchPokeData(pokemon) {
     const data = await res.json();
     pokeMons.push(data);
 }
-
-
-// let pokeImage = document.createElement('img');
-// 👇 in order to get image of a pokemon --> we need pokemon id (which is integers like 1,2,3).
-// pokeImage.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeData.id}.png`;
-// div.append(pokeImage);
-// pokeImage.after(pokeData.name);

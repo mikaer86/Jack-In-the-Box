@@ -27,36 +27,35 @@ function renderGame() {
     const gameZones = document.querySelector("gameBoard-zones");
     const loadWindow = window.onload;
 
-=======
-window.onload = renderGame();
+    window.onload = renderGame();
 
-function renderGame() {
+    function renderGame() {
 
-    const targetGameWindowElement = document.querySelector("#game-container");
-    const userInput = document.querySelector("cellAmount");
-    const createUserInput = document.createElement("input");
-    const createGameBoardElement = document.createElement("section");
-    const createGameZoneUl = document.createElement("ul");
-    const createGameZoneLi = document.createElement("li");
+        const targetGameWindowElement = document.querySelector("#game-container");
+        const userInput = document.querySelector("cellAmount");
+        const createUserInput = document.createElement("input");
+        const createGameBoardElement = document.createElement("section");
+        const createGameZoneUl = document.createElement("ul");
+        const createGameZoneLi = document.createElement("li");
 
-    createUserInput.className = "cellAmount";
-    createUserInput.type = "number";
-    createUserInput.value = "value";
-    createGameBoardElement.className ="gameBoard";
-    createGameZoneUl.className = "gameBoard-zones";
-    createGameZoneLi.className = "zone";
+        createUserInput.className = "cellAmount";
+        createUserInput.type = "number";
+        createUserInput.value = "value";
+        createGameBoardElement.className = "gameBoard";
+        createGameZoneUl.className = "gameBoard-zones";
+        createGameZoneLi.className = "zone";
 
 
-    targetGameWindowElement.append(createUserInput);
-    targetGameWindowElement.append(createGameBoardElement);
-    createGameBoardElement.append(createGameZoneUl);
-    createGameZoneUl.append( createGameZoneLi);
-    loadWindow.addEventlistener('click', function () {
-     // do we need to clean board each time window is loaded ??? // zones.innerHTML = '' ??
-    // inputCellAmount();
-    
+        targetGameWindowElement.append(createUserInput);
+        targetGameWindowElement.append(createGameBoardElement);
+        createGameBoardElement.append(createGameZoneUl);
+        createGameZoneUl.append(createGameZoneLi);
+        loadWindow.addEventlistener('click', function () {
+            // do we need to clean board each time window is loaded ??? // zones.innerHTML = '' ??
+            // inputCellAmount();
 
-}
+
+        }
 
 // function inputCellAmount (userInput) {
 
