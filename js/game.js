@@ -2,8 +2,7 @@
 import { fetchAllPokes, pokeMons } from './ApiData.js';
 //👇just call this function when ever we need a new randomed pokemond (ex:to play again)
 //🧷it takes time to fetch (it's normal);
-
-let pok = fetchAllPokes();
+fetchAllPokes();
 const zones = document.querySelectorAll(".zone");
 setTimeout(() => {
     for (let i = 0; i < pokeMons.length; i++) {
@@ -11,9 +10,7 @@ setTimeout(() => {
         pokeImage.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeMons[i].id}.png`;
         zones[i].append(pokeImage);
     }
-
-}, 3000);
-
+    }, 3000);
 //..........................to here..........................
 
 
