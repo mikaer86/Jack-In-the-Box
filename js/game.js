@@ -1,46 +1,44 @@
-window.onload = renderGame();
+window.onload = renderGameElements();
 
-function renderGame() {
+function renderGameElements() {
 
+    displayData = fetchPokeData(pokeMons);
     const targetGameWindowElement = document.querySelector("#game-container");
-    const userInput = document.querySelector("cellAmount");
+    const userInput = document.querySelector("#userInput");
 
     const createUserInput = document.createElement("input");
     const createGameBoardElement = document.createElement("section");
     const createGameZoneUl = document.createElement("ul");
     const createGameZoneLi = document.createElement("li");
 
-    createUserInput.className = "cellAmount";
+    createUserInput.classList.add("cellAmount");
     createUserInput.type = "number";
-    createUserInput.value = "value";
-    createGameBoardElement.className ="gameBoard";
-    createGameZoneUl.className = "gameBoard-zones";
-    createGameZoneLi.className = "zone";
+    createUserInput.min = "1";
+    createUserInput.setAttribute("id", "userInput");
+    createGameBoardElement.setAttribute("id", "gameBoard");
+    createGameZoneUl.setAttribute("id", "gameBoard-zones");
+    createGameZoneLi.setAttribute('id', "zone");
 
     targetGameWindowElement.append(createUserInput);
     targetGameWindowElement.append(createGameBoardElement);
     createGameBoardElement.append(createGameZoneUl);
-    createGameZoneUl.append( createGameZoneLi);
 
-  
-    // inputCellAmount();
-    
+
+    const addLiData = `
+   
+   "<li class="zone">" ${displayData} "</li>"
+
+   "<li class="zone">" ${displayData} "</li>"
+
+
+   "<li class="zone">" ${displayData} "</li>"
+
+
+   "<li class="zone">" ${displayData} "</li>"
+   
+   
+   `;
 
 }
 
-// function inputCellAmount (userInput) {
 
-//     if(!userInput.value === null || -1){
-    
-//         for(let i = userInput.value; i > 0; i++ ) {
-
-
-//         }
-
-//     } else {
-
-//         console.log("Input a none negative value");
-//     }
-
-//     return ;
-// }
