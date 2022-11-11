@@ -1,56 +1,36 @@
-import { fetchAllPokes, pokeMons } from ".js/ApiData.js";
+import { fetchAllPokes, pokeMons } from "./ApiData.js";
+import { CountDown } from "./countDown.js";
+
+const targetGameWindowElement = document.querySelector("#game-container");
+const targetGameZoneElement = document.querySelector("gameBoard-zones");
 
 function renderGameElements(pokeMons) {
 
     let displayData = fetchAllPokes(pokeMons);
-    const targetGameWindowElement = document.querySelector("#game-container");
-    const createUserInput = document.createElement("input");
+
+    const createTimerElement = document.createElement("span");
     const createGameBoardElement = document.createElement("section");
     const createGameZoneUl = document.createElement("ul");
     const createGameZoneLi = document.createElement("li");
 
-    createUserInput.classList.add("cellAmount");
-    createUserInput.setAttribute("type", "number");
-    createUserInput.setAttribute("min", "0");
-    createUserInput.setAttribute("id", "userInput");
+    createTimerElement.setAttribute("id", "timer");
     createGameBoardElement.setAttribute("id", "gameBoard");
     createGameZoneUl.setAttribute("id", "gameBoard-zones");
     createGameZoneLi.setAttribute("id", "zone");
+    createTimerElement.innerHTML = "min" + min + ":" + sec;
 
 
-    targetGameWindowElement.append(createUserInput);
     targetGameWindowElement.append(createGameBoardElement);
     createGameBoardElement.append(createGameZoneUl);
 
-    const addLiData = `
-   
-   "<li class="zone">" ${displayData} "</li>"
+    for (let pokemon of pokeMons) {
 
-   "<li class="zone">" ${displayData} "</li>"
+        const pokemonCharacter = createGameZoneLi.innerHTML = pokemon.url;
+        displayData.createGameZoneUl.append(pokemonCharacter);
 
-   "<li class="zone">" ${displayData} "</li>"
+    }
 
-   "<li class="zone">" ${displayData} "</li>"
 
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-
-   "<li class="zone">" ${displayData} "</li>"
-    
-   `;
-
-    createGameZoneUl.append(addLiData);
 
 }
 
