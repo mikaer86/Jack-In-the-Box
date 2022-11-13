@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
 
     margin: 0;
@@ -9,6 +10,7 @@
 html {
 
     font-size: 1.1rem;
+    font-family: 'Press Start 2P';
 }
 
 body {
@@ -18,43 +20,26 @@ body {
 
 }
 
-.placeholder {
 
-    display: flex;
-    width: 100%;
-    
-}
+.timer{
 
-.game-window {
-
-    padding: 4.3rem;
-    
-}
-
-.cellAmount {
-
-    width: 350px;
-    height: 45px;
-    padding: 1rem;
     position: absolute;
-    top: 40%;
-    left: 36%;
-    border-radius: 3px solid ;
+    left: 98%;
+    padding: 1.8rem;
+    font-size: 1.7rem;
+    color: whitesmoke;
+
+   
 }
-
-.cellAmount::placeholder {
-
-  font-size: 2.8rem;
-  font-family:  'Open Sans';
-  font-weight: bolder;
-}
-
 .gameBoard {
 
-
+ 
    width: 70%;
-   margin: 4rem auto;
    padding: 2.5rem;
+   display: flex;
+   margin: 4rem auto;
+   flex-direction: row;
+   justify-content: space-evenly;
    border-radius: 48px 0px 38px 0px;
    border-right: 10px solid rgb(45, 27, 27);
    border-bottom: 12px solid rgb(45, 27, 27);
@@ -64,12 +49,8 @@ body {
 
 .gameBoard-zones {
 
-    
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   margin: 1.5rem;
- list-style: none;
+  list-style: none;
 
 
 
@@ -80,6 +61,7 @@ body {
     width: 40px;
     height: 40px;
     padding: 2.3rem;
+    margin: 1rem;
     border: 3px solid rgb(126, 177, 132);
     
 }
