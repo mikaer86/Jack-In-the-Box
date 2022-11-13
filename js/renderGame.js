@@ -1,38 +1,65 @@
 import { fetchAllPokes, pokeMons } from "./ApiData.js";
-import { CountDown } from "./countDown.js";
 
-const targetGameWindowElement = document.querySelector("#game-container");
-const targetGameZoneElement = document.querySelector("gameBoard-zones");
 
-function renderGameElements(pokeMons) {
 
-    let displayData = fetchAllPokes(pokeMons);
 
+
+async function renderGameElements() {
+
+
+    // Targeting the game container and gameBoard
+    const targetGameWindowElement = document.querySelector("#game-container");
+    const targetGameBoardElement = document.querySelector("#gameBoard");
+
+
+    // create  timer, gameBoard and gameZones
     const createTimerElement = document.createElement("span");
     const createGameBoardElement = document.createElement("section");
     const createGameZoneUl = document.createElement("ul");
-    const createGameZoneLi = document.createElement("li");
 
+    // set element attributes
     createTimerElement.setAttribute("id", "timer");
-    createGameBoardElement.setAttribute("id", "gameBoard");
-    createGameZoneUl.setAttribute("id", "gameBoard-zones");
-    createGameZoneLi.setAttribute("id", "zone");
-    createTimerElement.innerHTML = "min" + min + ":" + sec;
+    createTimerElement.innerHTML = "05:00";
 
+    createGameBoardElement.setAttribute("class", "gameBoard");
+    createGameZoneUl.setAttribute("class", "gameBoard-zones");
 
+    // add elements to the DOM
+    targetGameWindowElement.append(createTimerElement);
     targetGameWindowElement.append(createGameBoardElement);
-    createGameBoardElement.append(createGameZoneUl);
 
-    for (let pokemon of pokeMons) {
+    // loop through the data within the list elements
+    for (let i = 0; i < 12; i++) {
 
-        const pokemonCharacter = createGameZoneLi.innerHTML = pokemon.url;
-        displayData.createGameZoneUl.append(pokemonCharacter);
+
+        const showFetchedData = async () => {
+
+            const showPokemon = await fetchAllPokes(pokeMons[i]);
+
+            console.log(showPokemon);
+        }
+
+        const createGameZoneLi = document.createElement("li");
+        const createGameZoneImg = document.createElement("img");
+
+        createGameZoneImg.setAttribute("src", "#");
+        createGameZoneLi.setAttribute("class", "zone");
+
+        createGameBoardElement.append(createGameZoneUl)
+        createGameZoneUl.append(createGameZoneLi);
+        createGameZoneLi.append(createGameZoneImg);
 
     }
 
-
-
 }
+
+
+renderGameElements();
+
+
+
+
+
 
 
 
