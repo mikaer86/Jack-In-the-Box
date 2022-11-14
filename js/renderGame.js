@@ -1,10 +1,10 @@
 import { fetchAllPokes, pokeMons } from "./ApiData.js";
 
+let pairArray = [];
+let index = 0;
+fetchAllPokes();
 
-
-
-
-async function renderGameElements() {
+function renderGameElements() {
 
 
     // Targeting the game container and gameBoard
@@ -32,27 +32,33 @@ async function renderGameElements() {
     for (let i = 0; i < 12; i++) {
 
 
-        const showFetchedData = async () => {
+        setTimeout(() => {
 
-            const showPokemon = await fetchAllPokes(pokeMons[i]);
+            const createGameZoneLi = document.createElement("li");
+            const createGameZoneImg = document.createElement("img");
 
-            console.log(showPokemon);
-        }
+            createGameZoneImg.setAttribute("src", "#");
+            createGameZoneImg.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeMons[i].id}.png`;
+            createGameZoneLi.setAttribute("class", "zone");
 
-        const createGameZoneLi = document.createElement("li");
-        const createGameZoneImg = document.createElement("img");
+            createGameBoardElement.append(createGameZoneUl)
+            createGameZoneUl.append(createGameZoneLi);
+            createGameZoneLi.append(createGameZoneImg);
 
-        createGameZoneImg.setAttribute("src", "#");
-        createGameZoneLi.setAttribute("class", "zone");
 
-        createGameBoardElement.append(createGameZoneUl)
-        createGameZoneUl.append(createGameZoneLi);
-        createGameZoneLi.append(createGameZoneImg);
+        }, 1500);
+
 
     }
+    compareID(pokeMons);
 
 }
 
+const compareID = async (pokeMons) => {
+
+
+
+}
 
 renderGameElements();
 
