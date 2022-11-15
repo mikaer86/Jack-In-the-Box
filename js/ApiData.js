@@ -1,24 +1,18 @@
 'use strict'
-// const playBtn = document.querySelector('#play-btn');
-// const zones = document.querySelectorAll('.zone');
 export let pokeMons = [];
-//👇 Fetching all 150 datas from Pokemon Api and we get 150 datas in return, limit=150 is an endpoint and changeable
 export async function fetchAllPokes() {
     const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
     const data = await res.json();
-    initializeBoard(data);
+    getRandomPokes(data);
 }
-function initializeBoard(allPokesData) {
-    //👇in .results we have a array of all pokemons --> each pokemon is array of 2 keys (name & url)
+function getRandomPokes(allPokesData) {
     const pokemonsArr = allPokesData.results;
-    //👇for getting random pokemons we make random numbers between 0 to 150 -->we need to fetch url of each random pokemon to get each pokemon's info individually
     for (let i = 0; i < 12; i++) {
         const randomIndex = Math.floor(Math.random() * 150);
-        fetchPokeData(pokemonsArr[randomIndex]);
+        fetchEachPokeData(pokemonsArr[randomIndex]);
     }
 }
-//👇pokeMons is a araay of 12 randomes pokemons (what we need)
-async function fetchPokeData(pokemon) {
+async function fetchEachPokeData(pokemon) {
     const url = pokemon.url;
     const res = await fetch(url);
     const data = await res.json();
