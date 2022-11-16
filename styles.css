@@ -72,7 +72,7 @@ h1 {
 
 .rotateCircle {
   background-color: green;
-  background-image: url(images/pikapika.jpg);
+  /* background-image: url(images/pikapika.jpg); */
 }
 .playBtn {
   padding: 1rem;
