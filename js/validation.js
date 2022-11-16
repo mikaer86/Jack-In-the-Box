@@ -1,9 +1,11 @@
 let visible = 0;
-let temp;
+let firstBall;
+import { compare } from "../js/compare.js";
 export function validateGame(playing, ball) {
     if (playing === false) {
         console.log("not in play mood");
         //if board is empty or full , for full check if allpaired()
+        //css ....
         alert("click play to get started");
     }
     if (playing === true) {
@@ -16,14 +18,12 @@ export function validateGame(playing, ball) {
 function validateBall(ClickedBall) {
     if (visible === 1) {
         console.log("visible is " + visible);
-        temp = ClickedBall.style
-        console.log(temp);
-
-        //save the curent elemnt
+        firstBall = ClickedBall
     }
     if (visible === 2) {
         console.log("visible is " + visible);
-        // comparePairs();
+        visible = 0;
+        compare(firstBall, ClickedBall)
 
     }
 }

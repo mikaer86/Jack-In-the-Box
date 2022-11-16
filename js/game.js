@@ -9,7 +9,7 @@ let playingStatus = false;
 playBtn.addEventListener('click', function () {
     // shuffle(pokeMons);
     playingStatus = initializeBoard(pokeMons);
-    // startTiming()+displaying; // the way harry said
+    // startTiming()+ displaying; // the way harry said
 
 })
 
