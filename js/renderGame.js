@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+///this file can be deleted
+
+
+
+
+
+
 import { fetchAllPokes, pokeMons } from "./ApiData.js";
 
 let pairArray = [];

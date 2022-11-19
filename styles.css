@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  background: linear-gradient(
+    to top,
+    rgb(211, 212, 234),
+    rgb(7, 2, 76),
+    rgb(2, 2, 45)
+  );
+}
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url(images/PokeWallpaper.png);
+}
+
+.game-container nav {
+  border: solid 1px red;
+}
+
+.gameBoard {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  width: 100%;
+  background-color: rgb(0 0 0 / 57%);
+}
+
+.game-container article .cell {
+  display: table-cell;
+  padding: 5px;
+  margin: 5px;
+  border: solid 1px rgb(238, 0, 255);
+}
+
+h1 {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  text-shadow: 3px 3px 1px rgb(205, 116, 21);
+  color: rgb(236, 240, 12);
+  font-size: 18px;
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-image: url(images/PokeBall.png);
+  background-size: 100% 100%;
+  transition: all 0.5s;
+}
+
+.rotateCircle {
+  background-color: green;
+  /* background-image: url(images/pikapika.jpg); */
+}
+.playBtn {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: #ae2323;
+  font-size: 1.5rem;
+  color: white;
+}

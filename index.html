@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="css/game.css" />
-</head>
-<body>
-    <main id='game-container'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack in the Box</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <img src="images/PokeTitle-removebg-preview.png" height="180" />
+      </header>
+      <nav class="navclass">
+        <h1>FIND THE POKEMON TWIN</h1>
+      </nav>
+      <article class="gameBoard">
+        <div class="row">
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+          <div class="cell">
+            <div class="circle" id="circle"></div>
+          </div>
+        </div>
+      </article>
+      <button class="playBtn">PLAY</button>
+    </div>
 
-    </main>
-    
-    <script src="js/renderGame.js" type="module"></script>
-</body>
-
+    <script src="js/game.js" type="module"></script>
+  </body>
 </html>
