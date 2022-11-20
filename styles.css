@@ -24,7 +24,7 @@ body {
   
   top: 5%;
   left: 90%;
-  width: 65px;
+  width: 165px;
   height: 35px;
   padding: 2.3rem;
   position: absolute;
@@ -38,6 +38,7 @@ body {
 .countDown {
   font-family: 'Major Mono Display', sans-serif;;
   font-size: 2rem;
+  font-weight: bolder;
   color: black;
 }
 .game-container {
