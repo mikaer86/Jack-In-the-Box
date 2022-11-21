@@ -8,8 +8,18 @@ let playingStatus = false;
 
 playBtn.addEventListener('click', function () {
     // shuffle(pokeMons);
-    playingStatus = initializeBoard(pokeMons);
-    // startTiming()+ displaying; // the way harry said
+    playingStatus = initializeBoard(pokeMons); //full=0
+    // startTiming() + displaying; // the way harry said
+    // timer = setInterval(() => {
+    //     timeElement = 15--;
+    //     if(time){
+    //         check(full); 12?or not
+    //     }
+    //     if (timer != true) {
+    //         playingStatus = false
+    //     }
+    // }, 1000);
+
 
 })
 
