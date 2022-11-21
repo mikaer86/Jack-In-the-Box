@@ -1,4 +1,6 @@
 'use strict'
+
+import { timer, timeDuration } from "../js/timer.js";
 export const circles = document.querySelectorAll(".circle");
 
 export function initializeBoard(pokeMons) {
@@ -8,6 +10,8 @@ export function initializeBoard(pokeMons) {
             circles[i].style.backgroundImage = `url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeMons[i].id}.png")`;
             circles[i].classList.toggle("rotateCircle");
         }
+
+
     }
     return true;
 }
