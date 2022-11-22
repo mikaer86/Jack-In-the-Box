@@ -12,18 +12,28 @@ let stopTime = false;
 fetchAllPokes();
 playBtn.addEventListener('click', function () {
     playingStatus = initializeBoard(pokeMons);
-    startTime = showTimer();
+
+    if (playingStatus) {
+
+        startTime = showTimer();
+
+    } else {
+
+        console.log("Error! Try Again!");
+    }
 
 
-    // startTiming()+ displaying; // the way harry said
+
+
 
 
 });
 
 
-// for (let i = 0; i < 12; i++) {
-//     circles[i].addEventListener("click", function () {
-//         validateGame(playingStatus, circles[i]);
+for (let i = 0; i < 12; i++) {
+
+    circles[i].addEventListener("click", function () {
+        validateGame(playingStatus, circles[i]);
 
     });
 }
