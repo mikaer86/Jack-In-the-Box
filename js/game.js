@@ -13,13 +13,20 @@ fetchAllPokes();
 playBtn.addEventListener('click', function () {
     playingStatus = initializeBoard(pokeMons);
 
-    if (playingStatus) {
+    while (playingStatus) {
 
-        startTime = showTimer();
+        startTime = startGameTimer();
 
-    } else {
+        if (timeDuration <= 0) {
 
-        console.log("Error! Try Again!");
+            stopGameTimer();
+
+
+        } else {
+
+            console.log("Error! Try Again!");
+        }
+
     }
 
 
