@@ -1,21 +1,39 @@
 
-function timer() {
+'use strict'
+let timeInterval;
+export let timeDuration = 60;
+let countDown;
 
-    let currentTime = date.now();
-    let timeDuration = timeDuration - (date.now() - currentTime / 1000) | 0;
-    seconds;
+export function stopGameTimer() {
 
+    clearInterval(timeInterval);
 
-    let seconds = timeDuration % 60 | 0;
-    let condSeconds = seconds < 10 ? "0" + seconds : seconds;
+    alert("Game Over! want to play again?");
+
+}
+
+function updateTime() {
 
 
     setInterval(function () {
 
+        countDown = document.querySelector(".countDown");
+        timeDuration = timeDuration - 1;
 
+        if (timeDuration >= 0) {
 
+            countDown.innerText = timeDuration;
+
+        }
 
     }, 1000);
 
+}
+
+
+export function startGameTimer() {
+
+    updateTime();
 
 }
+
