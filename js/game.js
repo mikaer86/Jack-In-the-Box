@@ -9,36 +9,21 @@ let playingStatus = false;
 let startTime = false;
 let stopTime = false;
 
+fetchAllPokes();
 playBtn.addEventListener('click', function () {
-    // shuffle(pokeMons);
     playingStatus = initializeBoard(pokeMons);
-
-    if (playingStatus) {
-
-        startTime = startGameTimer();
-
-        while (startTime) {
-
-            if (timeDuration <= 0) {
-
-                stopTime = stopGameTimer();
-
-            }
+    startTime = showTimer();
 
 
-        }
+    // startTiming()+ displaying; // the way harry said
 
 
-        // startTiming()+ displaying; // the way harry said
+});
 
 
-    });
-
-
-for (let i = 0; i < 12; i++) {
-    circles[i].addEventListener("click", function () {
-        validateGame(playingStatus, circles[i]);
-
+// for (let i = 0; i < 12; i++) {
+//     circles[i].addEventListener("click", function () {
+//         validateGame(playingStatus, circles[i]);
 
     });
 }

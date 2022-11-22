@@ -18,7 +18,7 @@ export function validateGame(playing, ball) {
 function validateBall(ClickedBall) {
     if (visible === 1) {
         console.log("visible is " + visible);
-        firstBall = ClickedBall
+        firstBall = ClickedBall; // myb local storage
     }
     if (visible === 2) {
         console.log("visible is " + visible);

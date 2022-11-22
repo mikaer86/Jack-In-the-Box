@@ -1,19 +1,17 @@
+let timeDuration = 60;
 
-'use strict'
-let timeInterval;
-export let timeDuration = 60;
-let countDown;
 
-export function stopGameTimer() {
 
-    clearInterval(timeInterval);
-
-    alert("Game Over! want to play again?");
-
+export function stopGameTime(setInterval, updateTime) {
+    updateTime();
+    clearInterval(setInterval);
+    alert("Game Over! Want to play Again?");
 }
 
-function updateTime() {
 
+
+
+export function updateTime() {
 
     setInterval(function () {
 
@@ -22,12 +20,11 @@ function updateTime() {
 
         if (timeDuration >= 0) {
 
-            countDown.innerText = timeDuration;
+            countDown.innerHTML = timeDuration;
 
         }
 
     }, 1000);
-
 }
 
 

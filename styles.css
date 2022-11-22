@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/major-mono-display');
+@import url("https://fonts.cdnfonts.com/css/major-mono-display");
 * {
   padding: 0;
   margin: 0;
@@ -20,8 +20,6 @@ body {
 }
 
 .timer-header {
-
-  
   top: 5%;
   left: 90%;
   width: 165px;
@@ -36,7 +34,7 @@ body {
 }
 
 .countDown {
-  font-family: 'Major Mono Display', sans-serif;;
+  font-family: "Major Mono Display", sans-serif;
   font-size: 2rem;
   font-weight: bolder;
   color: black;
@@ -97,7 +95,7 @@ h1 {
 
 .rotateCircle {
   background-color: green;
-  /* background-image: url(images/pikapika.jpg); */
+  background-image: url(images/pikapika.jpg);
 }
 .playBtn {
   padding: 1rem;
