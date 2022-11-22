@@ -1,17 +1,16 @@
 import { fetchAllPokes, pokeMons } from './ApiData.js';
 import { initializeBoard, circles } from '../js/Board.js';
 import { validateGame } from '../js/validation.js';
-import { timer, showTimer } from '../js/timer.js';
-fetchAllPokes();
-
+import { timer } from '../js/timer.js';
 const playBtn = document.querySelector('.playBtn');
 let playingStatus = false;
 let startTime = false;
 
+fetchAllPokes();
 playBtn.addEventListener('click', function () {
-    // shuffle(pokeMons);
     playingStatus = initializeBoard(pokeMons);
-    startTime = showTimer();
+    console.log(playingStatus);
+    // startTime = showTimer();
 
 
     // startTiming()+ displaying; // the way harry said
@@ -20,9 +19,9 @@ playBtn.addEventListener('click', function () {
 })
 
 
-for (let i = 0; i < 12; i++) {
-    circles[i].addEventListener("click", function () {
-        validateGame(playingStatus, circles[i]);
+// for (let i = 0; i < 12; i++) {
+//     circles[i].addEventListener("click", function () {
+//         validateGame(playingStatus, circles[i]);
 
-    });
-}
+//     });
+// }

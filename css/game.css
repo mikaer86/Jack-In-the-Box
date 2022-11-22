@@ -1,68 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-
-    font-size: 1.1rem;
-    font-family: 'Press Start 2P';
+  font-size: 1.1rem;
+  font-family: "Press Start 2P";
 }
 
 body {
-
-    background-color: rgb(54, 81, 238);
-
-
+  background-color: rgb(54, 81, 238);
 }
 
-
-.timer{
-
-    position: absolute;
-    left: 98%;
-    padding: 1.8rem;
-    font-size: 1.7rem;
-    color: whitesmoke;
-
-   
+.timer {
+  position: absolute;
+  left: 98%;
+  padding: 1.8rem;
+  font-size: 1.7rem;
+  color: whitesmoke;
 }
 .gameBoard {
-
- 
-   width: 70%;
-   padding: 2.5rem;
-   display: flex;
-   margin: 4rem auto;
-   flex-direction: row;
-   justify-content: space-evenly;
-   border-radius: 48px 0px 38px 0px;
-   border-right: 10px solid rgb(45, 27, 27);
-   border-bottom: 12px solid rgb(45, 27, 27);
-   background-color: rgb(37, 98, 46);
-    
+  width: 70%;
+  padding: 2.5rem;
+  display: flex;
+  margin: 4rem auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 48px 0px 38px 0px;
+  border-right: 10px solid rgb(45, 27, 27);
+  border-bottom: 12px solid rgb(45, 27, 27);
+  background-color: rgb(37, 98, 46);
 }
 
 .gameBoard-zones {
-
   margin: 1.5rem;
   list-style: none;
-
-
-
 }
 
-.zone  {
-
-    width: 40px;
-    height: 40px;
-    padding: 2.3rem;
-    margin: 1rem;
-    border: 3px solid rgb(126, 177, 132);
-    
+.zone {
+  width: 40px;
+  height: 40px;
+  padding: 2.3rem;
+  margin: 1rem;
+  border: 3px solid rgb(126, 177, 132);
 }
-
