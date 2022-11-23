@@ -1,17 +1,36 @@
-'use strict'
-export let timeDuration;
-export function timer() {
-    let currentTime = date.now();
-    timeDuration = timeDuration - (date.now() - currentTime / 1000) | 0;
-    seconds;
-    let seconds = timeDuration % 60 | 0;
-    let condSeconds = seconds < 10 ? "0" + seconds : seconds;
+let timeDuration = 60;
+
+
+
+export function stopGameTime(setInterval, updateTime) {
+    updateTime();
+    clearInterval(setInterval);
+    alert("Game Over! Want to play Again?");
+}
+
+
+
+
+export function updateTime() {
+
     setInterval(function () {
 
+        countDown = document.querySelector(".countDown");
+        timeDuration = timeDuration - 1;
 
-        console.log("timing");
+        if (timeDuration >= 0) {
+
+            countDown.innerHTML = timeDuration;
+
+        }
 
     }, 1000);
+}
 
+
+export function startGameTimer() {
+
+    updateTime();
 
 }
+
