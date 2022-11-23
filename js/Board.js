@@ -1,4 +1,4 @@
-let circles = document.querySelectorAll(".circle");
+export let circles = document.querySelectorAll(".circle");
 export function initializeBoard(pokeMons) {
     let shuffledPoke = shuffle(pokeMons); // 6 becomes 12 and shuffled
     for (let i = 0; i < shuffledPoke.length; i++) {

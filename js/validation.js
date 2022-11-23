@@ -1,24 +1,11 @@
 let visible = 0;
 let firstBall;
-import { compare } from "../js/compare.js";
-export function validateGame(playing, ball) {
-    if (playing === false) {
-        console.log("not in play mood");
-        //if board is empty or full , for full check if allpaired()
-        //css ....
-        alert("click play to get started");
-    }
-    if (playing === true) {
-        console.log("in play mood");
-        visible++;
-        validateBall(ball);
-    }
-
-}
-function validateBall(ClickedBall) {
+import { compare } from "./compare.js";
+export function validateGame(ClickedBall) {
+    visible++;
     if (visible === 1) {
         console.log("visible is " + visible);
-        firstBall = ClickedBall; // myb local storage
+        firstBall = ClickedBall;
     }
     if (visible === 2) {
         console.log("visible is " + visible);
