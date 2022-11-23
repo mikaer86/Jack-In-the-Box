@@ -1,12 +1,9 @@
-
-import { timer, timeDuration } from "../js/timer.js";
-export const circles = document.querySelectorAll(".circle");
+let circles = document.querySelectorAll(".circle");
 export function initializeBoard(pokeMons) {
     let shuffledPoke = shuffle(pokeMons); // 6 becomes 12 and shuffled
     for (let i = 0; i < shuffledPoke.length; i++) {
         circles[i].addEventListener("click", rotateCircle);
         function rotateCircle() {
-            // circles[i].style.backgroundImage;
             circles[i].style.backgroundImage = `url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shuffledPoke[i].id}.png")`;
             circles[i].classList.toggle("rotateCircle");
         }
