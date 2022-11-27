@@ -1,6 +1,6 @@
+'use strict'
 let visible = 0;
 let firstBall;
-import { compare } from "./compare.js";
 export function validateGame(ClickedBall) {
     visible++;
     if (visible === 1) {
@@ -12,5 +12,22 @@ export function validateGame(ClickedBall) {
         visible = 0;
         compare(firstBall, ClickedBall)
 
+    }
+}
+
+
+function compare(firstBall, secondBall) {
+    console.log("in compares");
+    let SecondUrl = secondBall.style.backgroundImage;
+    let firstUrl = firstBall.style.backgroundImage;
+    if (firstUrl != SecondUrl) {
+        console.log("not paired");
+        //set time to rotate back
+    }
+    if (firstUrl === SecondUrl) {
+        console.log("paired");
+        //css ..
+        //disable pairs
+        //score++ local storage
     }
 }

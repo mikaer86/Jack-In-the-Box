@@ -1,15 +1,18 @@
-@import url("https://fonts.cdnfonts.com/css/major-mono-display");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 img {
   max-width: 100%;
   display: block;
 }
 
+html {
+  font-size: 1.1rem;
+  font-family: "Press Start 2P";
+}
 body {
   background: linear-gradient(
     to top,
@@ -19,13 +22,25 @@ body {
   );
 }
 
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/PokeWallpaper.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 .timer-header {
   top: 5%;
   left: 5%;
   padding: 2.3rem;
   position: absolute;
   border-radius: 100%;
-  background-color: rgb(147, 255, 75);
+  background-color: rgb(123 126 0);
 }
 
 .countDown {
@@ -34,41 +49,24 @@ body {
   font-weight: bolder;
   color: black;
 }
-.game-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-image: url(images/PokeWallpaper.png);
-  position: relative;
-}
-
-.game-container nav {
-  border: solid 1px red;
-}
 
 .gameBoard {
-  display: flex;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  width: 80%;
 }
 
 .row {
   width: 100%;
+  display: flex;
   background-color: rgb(0 0 0 / 57%);
 }
 
 .game-container article .cell {
-  display: table-cell;
   padding: 5px;
-  margin: 5px;
+  width: 25%;
   border: solid 1px rgb(238, 0, 255);
 }
 
@@ -81,17 +79,11 @@ h1 {
 }
 
 .circle {
-  width: 75px;
-  height: 75px;
   border-radius: 50%;
   background-image: url(images/PokeBall.png);
-  background-size: 100% 100%;
-  transition: all 0.5s;
-}
-
-.rotateCircle {
-  background-color: green;
-  background-image: url(images/pikapika.jpg);
+  background-size: 100%;
+  transition: all 1s;
+  width: 100%;
 }
 .playAgainBtn {
   padding: 1rem;
