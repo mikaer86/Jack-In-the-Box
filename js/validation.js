@@ -10,7 +10,6 @@ export function validateGame(ClickedBall, i) {
     }
     if (visible === 2) {
         compare(firstBall, ClickedBall);
-
         visible = 0;
     }
 }
@@ -20,6 +19,7 @@ function compare(firstBall, secondBall) {
     let firstUrl = firstBall.src;
     let secondUrl = secondBall.src;
     if (firstUrl != secondUrl) {
+        console.log(firstBall.disabled);
         setTimeout(() => {
             circles[firstBallIndex].src = "../images/PokeBall.png";
             secondBall.src = '../images/PokeBall.png';
@@ -27,6 +27,7 @@ function compare(firstBall, secondBall) {
     }
     if (firstUrl === secondUrl) {
         console.log(secondBall);
+
         //css ..
         //disable pairs
         //score++ local storage

@@ -14,17 +14,18 @@ for (let i = 0; i < 12; i++) {
         }
         if (!hasTime) {
             //disableBoard();
+            alert("game over")
         }
     });
 }
 
-function disableBoard() {
-    console.log(circles);
-    for (let i = 0; i < 12; i++) {
-        circles[i].disabled = 'true';
+// function disableBoard() {
+//     console.log(circles);
+//     for (let i = 0; i < 12; i++) {
+//         circles[i].disabled = 'true';
 
-    }
-}
+//     }
+// }
 playAgainBtn.addEventListener('click', function () {
     fetchAllPokes();
     initializeBoard(pokeMons);
