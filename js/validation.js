@@ -1,31 +1,32 @@
-'use strict'
+import { circles } from './Board.js'
 let visible = 0;
 let firstBall;
-export function validateGame(ClickedBall) {
+let firstBallIndex;
+export function validateGame(ClickedBall, i) {
     visible++;
     if (visible === 1) {
-        console.log("visible is " + visible);
         firstBall = ClickedBall;
+        firstBallIndex = i;
     }
     if (visible === 2) {
-        console.log("visible is " + visible);
-        visible = 0;
-        compare(firstBall, ClickedBall)
+        compare(firstBall, ClickedBall);
 
+        visible = 0;
     }
 }
 
 
 function compare(firstBall, secondBall) {
-    console.log("in compares");
-    let SecondUrl = secondBall.style.backgroundImage;
-    let firstUrl = firstBall.style.backgroundImage;
-    if (firstUrl != SecondUrl) {
-        console.log("not paired");
-        //set time to rotate back
+    let firstUrl = firstBall.src;
+    let secondUrl = secondBall.src;
+    if (firstUrl != secondUrl) {
+        setTimeout(() => {
+            circles[firstBallIndex].src = "../images/PokeBall.png";
+            secondBall.src = '../images/PokeBall.png';
+        }, 1000);
     }
-    if (firstUrl === SecondUrl) {
-        console.log("paired");
+    if (firstUrl === secondUrl) {
+        console.log(secondBall);
         //css ..
         //disable pairs
         //score++ local storage

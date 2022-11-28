@@ -10,7 +10,7 @@ for (let i = 0; i < 12; i++) {
     circles[i].addEventListener("click", function () {
         circles[i].src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shuffledPoke[i].id}.png`;
         if (hasTime) {
-            validateGame(circles[i]);
+            validateGame(circles[i], i);
         }
         if (!hasTime) {
             //disableBoard();
