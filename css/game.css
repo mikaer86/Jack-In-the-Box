@@ -21,7 +21,9 @@ body {
     rgb(2, 2, 45)
   );
 }
-
+label {
+  color: white;
+}
 .game-container {
   display: flex;
   align-items: center;
@@ -37,19 +39,31 @@ body {
 .timer-header {
   top: 5%;
   left: 5%;
-  padding: 2.3rem;
   position: absolute;
-  border-radius: 100%;
-  background-color: rgb(123 126 0);
+  font-family: "Major Mono Display", sans-serif;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  background-color: #ff2020;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 .countDown {
-  font-family: "Major Mono Display", sans-serif;
-  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 30%;
+  background-color: rgb(255, 255, 0);
   font-weight: bolder;
-  color: black;
 }
+.score {
+  padding: 2rem;
+  border-radius: 30%;
 
+  background-color: yellow;
+}
 .gameBoard {
   display: flex;
   flex-wrap: wrap;
