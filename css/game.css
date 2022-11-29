@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +56,7 @@ label {
 .navclass h1 {
   color: rgb(236, 240, 12);
   font-size: 2rem;
+  font-family: "Silkscreen", cursive;
 }
 .countDown {
   padding: 1rem;
