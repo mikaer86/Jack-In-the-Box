@@ -84,7 +84,7 @@ label {
 }
 
 .game-container article .cell {
-  padding: 5px;
+  padding: 0.5rem;
   width: 25%;
 }
 
@@ -101,7 +101,7 @@ label {
   color: white;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 740px) and (max-width: 1800px) {
   .gameBoard {
     width: 50%;
   }

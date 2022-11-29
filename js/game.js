@@ -26,8 +26,6 @@ let setGame = () => {
     }
 }
 
-
-
 playAgainBtn.addEventListener('click', function () {
     for (let i = 0; i < 12; i++) {
         circles[i].src = "../images/PokeBall.png";
