@@ -24,12 +24,12 @@ function compare(firstBall, secondBall) {
         setTimeout(() => {
             circles[firstBallIndex].src = "../images/PokeBall.png";
             secondBall.src = '../images/PokeBall.png';
-        }, 1000);
+        }, 500);
     }
     if (firstUrl === secondUrl) {
         score++;
         //css ..
         //disable pairs
-        //score++ local storage
+
     }
 }
