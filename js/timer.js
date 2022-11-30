@@ -22,7 +22,6 @@ export function updateTime() {
 
 }
 
-
 export function startGameTimer() {
     timeDuration = 60;
     hasTime = setInterval(updateTime, 1000);

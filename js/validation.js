@@ -1,10 +1,11 @@
 import { circles } from './Board.js'
-let visible = 0;
+let visible = JSON.parse(localStorage.getItem('visible')) || 0;
 let firstBall;
 let firstBallIndex;
 let score = 0;
 export function validateGame(ClickedBall, i) {
     visible++;
+    console.log(visible);
     if (visible === 1) {
         firstBall = ClickedBall;
         firstBallIndex = i;
