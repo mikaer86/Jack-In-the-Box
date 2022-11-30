@@ -4,6 +4,7 @@ let firstBall;
 let firstBallIndex;
 let score = 0;
 export function validateGame(ClickedBall, i) {
+
     visible++;
     console.log(visible);
     if (visible === 1) {
