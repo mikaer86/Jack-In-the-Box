@@ -1,6 +1,6 @@
 import { fetchAllPokes } from "./ApiData.js";
 import { initializeBoard, circles } from "./Board.js";
-import { validateGame } from "../js/validation.js";
+import { validateGame,score } from "../js/validation.js";
 import { startGameTimer, hasTime } from "./timer.js";
 let playAgainBtn = document.querySelector(".playAgainBtn");
 let scoreEl = document.querySelector(".score");
@@ -39,6 +39,7 @@ let updateScore = (score) => {
 playAgainBtn.addEventListener("click", function () {
     fetchAllPokes();
     updateScore(0);
+    score=0;
     setGame();
     localStorage.setItem("visible", JSON.stringify(0));
     for (let i = 0; i < 12; i++) {

@@ -3,7 +3,7 @@ import {stopGameTimer} from './timer.js';
 let visible = JSON.parse(localStorage.getItem('visible')) || 0;
 let firstBall;
 let firstBallIndex;
-let score = 0;
+export let score = 0;
 export function validateGame(ClickedBall, i) {
     visible++;
     if (visible === 1) {
