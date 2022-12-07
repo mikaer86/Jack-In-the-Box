@@ -33,13 +33,13 @@ function disableBoard() {
     }
 }
 let updateScore = (score) => {
+    score=0;
     scoreEl.innerHTML = score;
 };
 
 playAgainBtn.addEventListener("click", function () {
     fetchAllPokes();
     updateScore(0);
-    score=0;
     setGame();
     localStorage.setItem("visible", JSON.stringify(0));
     for (let i = 0; i < 12; i++) {
