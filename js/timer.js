@@ -3,10 +3,11 @@ let timeDuration;
 export let hasTime;
 let countDown = document.querySelector(".countDown");
 
-function stopGameTimer(setInterval, updateTime) {
+export function stopGameTimer(setInterval, updateTime) {
     clearInterval(hasTime);
-    hasTime = null;
-    // alert("Game Over! Want to play Again?");
+    console.log(hasTime);
+    // hasTime = null;
+    alert("Game Over!");
 }
 
 
@@ -23,7 +24,7 @@ export function updateTime() {
 }
 
 export function startGameTimer() {
-    timeDuration = 60;
+    timeDuration =30;
     hasTime = setInterval(updateTime, 1000);
 }
 

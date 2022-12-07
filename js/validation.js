@@ -1,12 +1,11 @@
 import { circles } from './Board.js'
+import {stopGameTimer} from './timer.js';
 let visible = JSON.parse(localStorage.getItem('visible')) || 0;
 let firstBall;
 let firstBallIndex;
 let score = 0;
 export function validateGame(ClickedBall, i) {
-
     visible++;
-    console.log(visible);
     if (visible === 1) {
         firstBall = ClickedBall;
         firstBallIndex = i;
@@ -30,6 +29,9 @@ function compare(firstBall, secondBall) {
     }
     if (firstUrl === secondUrl) {
         score++;
+        if(score==6){
+            stopGameTimer();
+        }
         //css ..
         //disable pairs
 
