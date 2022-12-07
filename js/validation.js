@@ -3,7 +3,10 @@ import {stopGameTimer} from './timer.js';
 let visible = JSON.parse(localStorage.getItem('visible')) || 0;
 let firstBall;
 let firstBallIndex;
-export let score = 0;
+let score=0;
+export  function resetScore(scoreR) {
+    score=scoreR;
+}
 export function validateGame(ClickedBall, i) {
     visible++;
     if (visible === 1) {
@@ -17,7 +20,6 @@ export function validateGame(ClickedBall, i) {
     return score;
 }
 
-
 function compare(firstBall, secondBall) {
     let firstUrl = firstBall.src;
     let secondUrl = secondBall.src;
@@ -29,11 +31,10 @@ function compare(firstBall, secondBall) {
     }
     if (firstUrl === secondUrl) {
         score++;
+        console.log("again score");
         if(score==6){
-            stopGameTimer();
+            stopGameTimer("You win !");
         }
         //css ..
-        //disable pairs
-
     }
 }
