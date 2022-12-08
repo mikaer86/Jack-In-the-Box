@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 1.1rem;
+  font-family: "Press Start 2P";
+  text-align: center;
+}
+body {
+  background: linear-gradient(
+    to top,
+    rgb(211, 212, 234),
+    rgb(7, 2, 76),
+    rgb(2, 2, 45)
+  );
+}
+label {
+  color: white;
+}
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/PokeWallpaper.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.timer-header {
+  top: 2%;
+  left: 5%;
+  position: absolute;
+  font-family: "Major Mono Display", sans-serif;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff2020;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+.navclass h1 {
+  color: rgb(236, 240, 12);
+  font-size: 2rem;
+  font-family: "Silkscreen", cursive;
+}
+.countDown {
+  padding: 1rem;
+  border-radius: 30%;
+  background-color: rgb(11, 11, 5);
+  color: white;
+  font-weight: bolder;
+}
+.score {
+  padding: 1rem;
+  border-radius: 30%;
+  background-color: rgb(11, 11, 7);
+  color: white;
+}
+.gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: rgb(0 0 0 / 87%);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.game-container article .cell {
+  padding: 0.5rem;
+  width: 25%;
+}
+
+.circle {
+  border-radius: 50%;
+  transition: all 1s;
+  width: 100%;
+}
+.playAgainBtn {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: #ae2323;
+  font-size: 1.5rem;
+  color: white;
+}
+.footerContainer{
+  width: 7%;
+  background-color:  rgb(0 0 0 / 87%);
+  border-radius: 2rem;
+}
+.footerContainer a{
+  color: white ;
+}

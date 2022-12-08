@@ -1,0 +1,14 @@
+@media screen and (min-width: 740px) and (max-width: 1800px) {
+    .gameBoard {
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 680px) {
+    header {
+      display: none;
+    }
+
+
+  }
+  
